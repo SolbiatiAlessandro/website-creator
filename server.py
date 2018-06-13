@@ -13,8 +13,8 @@ def website():
 	print("inside website()")
 	print(request)
 	print(request.form["link"])
-	import urllib2
-	contents = urllib2.urlopen(request.form["link"]).read()
+	import urllib.request
+	contents = urllib.request.urlopen(request.form["link"]).read()
 	
 	_title = contents.find("<title>")
 	title = contents[_title+7:contents.find("\xe2",_title)]
