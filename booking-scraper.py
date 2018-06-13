@@ -1,5 +1,5 @@
-import urllib2
-contents = urllib2.urlopen("https://www.booking.com/hotel/it/bilocale-appennini.it.html").read()
+import urllib.request
+contents = urllib.request.urlopen("https://www.booking.com/hotel/it/bilocale-appennini.it.html").read()
 images = []
 urls = []
 start = -1 
